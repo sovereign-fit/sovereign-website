@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Metadata -->
+  <title>Sovereign AI Systems | Enterprise Private LLMs &amp; Data Sovereignty</title>
+  <meta name="description" content="Deploy enterprise sovereign AI infrastructure. Air-gapped on-premises compute, private LLM fine-tuning, and zero-telemetry architectures compliant with EU AI Act and HIPAA." />
+  <link rel="canonical" href="https://www.sovereignaisystems.co/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sovereign AI Systems" />
+  <meta property="og:title" content="Sovereign AI Systems | Enterprise Private LLMs &amp; Data Sovereignty" />
+  <meta property="og:description" content="Air-gapped on-premises compute, private LLM fine-tuning, and zero-telemetry architectures compliant with EU AI Act and HIPAA." />
+  <meta property="og:url" content="https://www.sovereignaisystems.co/" />
+  <meta property="og:image" content="https://www.sovereignaisystems.co/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@SovereignAISys" />
+  <meta name="twitter:title" content="Sovereign AI Systems | Enterprise Private LLMs &amp; Data Sovereignty" />
+  <meta name="twitter:description" content="Deploy enterprise AI you truly own. Zero third-party ingestion. Total data sovereignty." />
+  <meta name="twitter:image" content="https://www.sovereignaisystems.co/og-image.png" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.sovereignaisystems.co/#organization",
+        "name": "Sovereign AI Systems",
+        "url": "https://www.sovereignaisystems.co",
+        "logo": "https://www.sovereignaisystems.co/favicon.svg",
+        "description": "Architects of enterprise sovereign AI infrastructure, specializing in private large language model deployment, on-premises compute integration, and complete data residency governance.",
+        "sameAs": [
+          "https://www.linkedin.com/company/sovereign-ai-systems",
+          "https://twitter.com/SovereignAISys"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Enterprise Sales",
+          "email": "inbound@sovereignaisystems.co"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.sovereignaisystems.co/#website",
+        "url": "https://www.sovereignaisystems.co",
+        "name": "Sovereign AI Systems",
+        "publisher": { "@id": "https://www.sovereignaisystems.co/#organization" }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.sovereignaisystems.co/#service",
+        "name": "Enterprise Sovereign AI Deployment",
+        "provider": { "@id": "https://www.sovereignaisystems.co/#organization" },
+        "areaServed": "Global",
+        "knowsAbout": [
+          "Sovereign AI Architecture",
+          "On-Premises LLM Fine-Tuning",
+          "Data Sovereignty and Residency Regulations",
+          "AI Governance and Security Frameworks"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Sovereign AI Implementation Tracks",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Private On-Premises LLM Infrastructure",
+                "description": "Deployment of open-weight enterprise foundation models within dedicated hardware perimeters with zero third-party telemetry."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Data Sovereignty Compliance and Governance Auditing",
+                "description": "Technical and legal architecture auditing ensuring organizational AI systems adhere to GDPR, HIPAA, and regional sovereign compliance mandates."
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: '#020617',
+            surface: '#0f172a',
+            line: '#1e293b'
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500/30">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6" aria-label="Primary">
+      <a href="#top" class="flex items-center gap-2 font-semibold tracking-tight">
+        <span class="inline-block h-2.5 w-2.5 rounded-full bg-emerald-400" aria-hidden="true"></span>
+        Sovereign AI Systems
+      </a>
+
+      <div class="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+        <a href="#risk-matrix" class="hover:text-emerald-400">Risk Matrix</a>
+        <a href="#architecture" class="hover:text-emerald-400">Architecture</a>
+        <a href="#scorecard" class="hover:text-emerald-400">Readiness Scorecard</a>
+        <a href="#faq" class="hover:text-emerald-400">FAQ</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="https://ecommerce.sovereignaisystems.co/briefing"
+           class="hidden rounded-md bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-emerald-400 sm:inline-block">
+          Schedule Architecture Briefing
+        </a>
+        <!-- Mobile hamburger -->
+        <button id="menu-btn" class="rounded-md border border-slate-700 p-2 md:hidden"
+                aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden border-t border-slate-800 px-4 py-4 md:hidden">
+      <ul class="flex flex-col gap-3 text-sm text-slate-300">
+        <li><a href="#risk-matrix" class="block py-1 hover:text-emerald-400">Risk Matrix</a></li>
+        <li><a href="#architecture" class="block py-1 hover:text-emerald-400">Architecture</a></li>
+        <li><a href="#scorecard" class="block py-1 hover:text-emerald-400">Readiness Scorecard</a></li>
+        <li><a href="#faq" class="block py-1 hover:text-emerald-400">FAQ</a></li>
+        <li>
+          <a href="https://ecommerce.sovereignaisystems.co/briefing"
+             class="mt-2 block rounded-md bg-emerald-500 px-4 py-2 text-center font-semibold text-slate-950">
+            Schedule Architecture Briefing
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="mx-auto max-w-7xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
+      <div class="max-w-4xl">
+        <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/80 px-3 py-1 text-xs font-medium text-emerald-400">
+          <span class="h-1.5 w-1.5 rounded-full bg-emerald-400" aria-hidden="true"></span>
+          Zero-telemetry · Air-gapped · Compliance-first
+        </p>
+        <h1 class="text-4xl font-bold leading-tight tracking-tight sm:text-6xl">
+          Deploy Enterprise AI You Truly Own.
+          <span class="text-emerald-400">Zero Third-Party Ingestion. Total Data Sovereignty.</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-400">
+          Public commercial APIs train on your prompts, route your data across jurisdictions, and
+          change their terms on a quarterly cadence. Sovereign AI Systems architects private,
+          compliant infrastructure where every token is processed inside a perimeter you control —
+          governed by your policies, not a vendor's.
+        </p>
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a href="https://ecommerce.sovereignaisystems.co/briefing"
+             class="rounded-md bg-emerald-500 px-6 py-3 text-center font-semibold text-slate-950 hover:bg-emerald-400">
+            Schedule Architecture Briefing
+          </a>
+          <a href="https://ecommerce.sovereignaisystems.co/blueprint"
+             class="rounded-md border border-slate-700 bg-slate-900/80 px-6 py-3 text-center font-semibold text-slate-100 hover:border-emerald-500 hover:text-emerald-400">
+            Download Enterprise Security Blueprint
+          </a>
+        </div>
+      </div>
+
+      <!-- Trust / Compatibility Strip -->
+      <ul class="mt-16 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-slate-800 pt-8 text-xs font-medium uppercase tracking-wider text-slate-500"
+          aria-label="Technology and compliance compatibility">
+        <li>NVIDIA On-Prem Clusters</li>
+        <li>vLLM</li>
+        <li>Hugging Face</li>
+        <li>ISO 27001</li>
+        <li>SOC 2</li>
+        <li>HIPAA</li>
+        <li>EU AI Act</li>
+      </ul>
+    </section>
+
+    <!-- ===================== RISK MATRIX ===================== -->
+    <section id="risk-matrix" class="border-t border-slate-800 bg-slate-900/40">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <h2 class="text-3xl font-bold tracking-tight">The Public Cloud AI Risk Matrix</h2>
+        <p class="mt-3 max-w-2xl text-slate-400">
+          An executive comparison of what changes when inference leaves the shared API and enters
+          your hardware perimeter.
+        </p>
+
+        <div class="mt-10 overflow-x-auto rounded-lg border border-slate-800">
+          <table class="w-full min-w-[720px] text-left text-sm">
+            <caption class="sr-only">Comparison of Public Cloud APIs versus Sovereign AI Systems across five enterprise dimensions</caption>
+            <thead class="bg-slate-900 text-xs uppercase tracking-wider text-slate-400">
+              <tr>
+                <th scope="col" class="px-6 py-4 font-semibold">Dimension</th>
+                <th scope="col" class="px-6 py-4 font-semibold">Public Cloud APIs</th>
+                <th scope="col" class="px-6 py-4 font-semibold text-emerald-400">Sovereign AI Systems</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800">
+              <tr>
+                <th scope="row" class="px-6 py-4 font-medium">Data Perimeter Security</th>
+                <td class="px-6 py-4 text-slate-400">Prompts transit vendor servers; retention policies are vendor-controlled.</td>
+                <td class="px-6 py-4">Inference executes inside your air-gapped perimeter. Zero egress.</td>
+              </tr>
+              <tr>
+                <th scope="row" class="px-6 py-4 font-medium">Intellectual Property Control</th>
+                <td class="px-6 py-4 text-slate-400">Training-use carve-outs and policy revisions erode IP guarantees.</td>
+                <td class="px-6 py-4">Local weights are licensed assets your organization holds outright.</td>
+              </tr>
+              <tr>
+                <th scope="row" class="px-6 py-4 font-medium">Regulatory &amp; Data Residency</th>
+                <td class="px-6 py-4 text-slate-400">Jurisdiction depends on opaque vendor routing regions.</td>
+                <td class="px-6 py-4">Residency enforced at the physical layer — GDPR, HIPAA, EU AI Act ready.</td>
+              </tr>
+              <tr>
+                <th scope="row" class="px-6 py-4 font-medium">System Determinism &amp; Stability</th>
+                <td class="px-6 py-4 text-slate-400">Version deprecations and silent model updates break pipelines.</td>
+                <td class="px-6 py-4">Pinned model versions with deterministic, reproducible outputs.</td>
+              </tr>
+              <tr>
+                <th scope="row" class="px-6 py-4 font-medium">Long-Term Unit Economics</th>
+                <td class="px-6 py-4 text-slate-400">Per-token pricing scales linearly with usage forever.</td>
+                <td class="px-6 py-4">Capitalized hardware; marginal cost approaches zero at scale.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ARCHITECTURE ===================== -->
+    <section id="architecture" class="border-t border-slate-800">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <h2 class="text-3xl font-bold tracking-tight">The 3-Tier Technical Solution Architecture</h2>
+        <p class="mt-3 max-w-2xl text-slate-400">
+          Every engagement is delivered as three interlocking layers of sovereign capability.
+        </p>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <article class="rounded-lg border border-slate-800 bg-slate-900/80 p-6">
+            <p class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Tier 01</p>
+            <h3 class="mt-3 text-xl font-semibold">Data Isolation &amp; Air-Gapped Perimeters</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-400">
+              Dedicated GPU clusters provisioned inside your data center or sovereign cloud region,
+              with physically or logically isolated networks, hardware-rooted attestation, and no
+              outbound dependency on third-party inference endpoints.
+            </p>
+          </article>
+
+          <article class="rounded-lg border border-slate-800 bg-slate-900/80 p-6">
+            <p class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Tier 02</p>
+            <h3 class="mt-3 text-xl font-semibold">Proprietary Model Adaptation &amp; Local Weights</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-400">
+              Open-weight foundation models fine-tuned on your proprietary corpus — on-premises.
+              Your weights never leave your vault, enabling defensible differentiation competitors
+              renting the same API can never replicate.
+            </p>
+          </article>
+
+          <article class="rounded-lg border border-slate-800 bg-slate-900/80 p-6">
+            <p class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Tier 03</p>
+            <h3 class="mt-3 text-xl font-semibold">Governance, Guardrails &amp; AIBOM Auditing</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-400">
+              Complete AI Bills of Materials (AIBOM), policy-as-code guardrails, immutable audit
+              logs, and regulator-ready evidence generation mapped to EU AI Act and HIPAA controls.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SCORECARD CALLOUT ===================== -->
+    <section id="scorecard" class="border-t border-slate-800 bg-slate-900/40">
+      <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 py-16 sm:px-6 md:flex-row md:items-center">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">The 2-Minute Sovereign AI Readiness Scorecard</h2>
+          <p class="mt-2 max-w-xl text-slate-400">
+            Assess your organization's data perimeter, model maturity, and compliance posture in
+            under two minutes. Receive a graded readiness report with prioritized next steps.
+          </p>
+        </div>
+        <a href="https://ecommerce.sovereignaisystems.co/scorecard"
+           class="shrink-0 rounded-md bg-emerald-500 px-6 py-3 font-semibold text-slate-950 hover:bg-emerald-400">
+          Take the Scorecard →
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section id="faq" class="border-t border-slate-800">
+      <div class="mx-auto max-w-4xl px-4 py-20 sm:px-6">
+        <h2 class="text-3xl font-bold tracking-tight">Frequently Asked Questions</h2>
+
+        <div class="mt-10 divide-y divide-slate-800 rounded-lg border border-slate-800 bg-slate-900/80">
+          <details class="group px-6 py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+              How does sovereign AI ensure data residency compliance?
+              <span class="text-emerald-400 transition group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-400">
+              Because inference and fine-tuning execute on hardware inside your declared jurisdiction,
+              residency is enforced at the physical and network layers rather than by contractual
+              promise. Auditable network egress policies and region-pinned storage complete the
+              control chain for GDPR, Schrems II, and national sovereignty mandates.
+            </p>
+          </details>
+
+          <details class="group px-6 py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+              What hardware is required to run private LLMs on-premises?
+              <span class="text-emerald-400 transition group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-400">
+              Production 70B-class deployments typically begin with 2–4 NVIDIA H100 or A100 nodes
+              with NVLink, while quantized 7B–13B models serve well on a single GPU workstation.
+              We size clusters against your concurrency, latency, and context-window requirements
+              during the architecture briefing.
+            </p>
+          </details>
+
+          <details class="group px-6 py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+              Does air-gapped deployment introduce unacceptable model latency?
+              <span class="text-emerald-400 transition group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-400">
+              Modern serving stacks (vLLM with continuous batching and speculative decoding) deliver
+              first-token latencies comparable to hosted APIs for enterprise workloads. Because
+              inference runs on dedicated — not oversubscribed — hardware, p99 latency is frequently
+              more predictable than public endpoints.
+            </p>
+          </details>
+
+          <details class="group px-6 py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+              Is fine-tuning on proprietary data private?
+              <span class="text-emerald-400 transition group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-400">
+              Yes. Fine-tuning runs entirely within your perimeter on open-weight checkpoints. No
+              dataset, gradient artifact, or derived weight ever transits a third-party system, and
+              the resulting adapter or merged model is an asset your organization controls outright.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="border-t border-slate-800 bg-slate-900/40">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+      <div class="grid gap-8 md:grid-cols-3">
+        <div>
+          <p class="font-semibold">Sovereign AI Systems</p>
+          <p class="mt-2 text-sm text-slate-400">
+            Architects of enterprise sovereign AI infrastructure — private LLM deployment,
+            on-premises compute integration, and complete data residency governance.
+          </p>
+        </div>
+        <nav aria-label="Footer" class="text-sm text-slate-400">
+          <p class="mb-2 font-medium text-slate-300">Navigate</p>
+          <ul class="space-y-1">
+            <li><a href="#risk-matrix" class="hover:text-emerald-400">Risk Matrix</a></li>
+            <li><a href="#architecture" class="hover:text-emerald-400">Architecture</a></li>
+            <li><a href="#scorecard" class="hover:text-emerald-400">Readiness Scorecard</a></li>
+            <li><a href="#faq" class="hover:text-emerald-400">FAQ</a></li>
+          </ul>
+        </nav>
+        <div class="text-sm text-slate-400">
+          <p class="mb-2 font-medium text-slate-300">Contact</p>
+          <p>Enterprise Sales: <a href="mailto:inbound@sovereignaisystems.co" class="hover:text-emerald-400">inbound@sovereignaisystems.co</a></p>
+          <p class="mt-4 text-xs">Compliant with EU AI Act, GDPR, and HIPAA-aligned architectures. ISO 27001 / SOC 2 aligned delivery practices.</p>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-slate-800 pt-6 text-xs text-slate-500">
+        <p>&copy; <span id="year">2026</span> Sovereign AI Systems. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    // Mobile menu toggle (accessible)
+    (function () {
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      btn.addEventListener('click', function () {
+        const open = menu.classList.toggle('hidden') === false;
+        btn.setAttribute('aria-expanded', String(open));
+      });
+      menu.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          menu.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+
+    // Dynamic copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
